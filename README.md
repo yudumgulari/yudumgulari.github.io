@@ -9,13 +9,18 @@ Statik bir site (HTML/CSS/JS). Build adımı yok — `site/` klasörünü olduğ
 - `script.js` — hatırlatmalar, menü, animasyonlar
 - `assets/img/` — optimize edilmiş görseller
 
-## Cloudflare Pages'e yayınlama
-1. [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages**.
-2. **Direct Upload** seç (Git deposu gerekmez).
-3. Bu `site/` klasörünün **içeriğini** sürükle-bırak.
-4. Yayınla. Hazır olan adresi (`*.pages.dev`) kendi alan adına bağlayabilirsin.
+## Yayın (GitHub Pages)
+Site şurada yayında: **https://yudumgulari.github.io/**
+Depo: https://github.com/yudumgulari/yudumgulari.github.io (main dalı, kök klasör).
 
-> Git ile çalışmak istersen: depoyu bağla, **Build command** boş bırak, **Output directory** = `site` (veya site'ı köke taşı).
+Değişiklikler `main` dalına push edildiğinde ~1 dakikada otomatik yayına girer:
+
+```bash
+cd site
+git add -A
+git commit -m "güncelleme"
+git push
+```
 
 ## Yeni yazı eklemek (birlikte yapıyoruz)
 `yazilar.html` içinde bir yazı bloğu şöyle görünür:
@@ -31,6 +36,7 @@ Statik bir site (HTML/CSS/JS). Build adımı yok — `site/` klasörünü olduğ
 
 Bu bloğu kopyala, metni değiştir, en üste ekle. Ana sayfada öne çıkarmak istersen
 `index.html` içindeki "İçimden Geçen" bölümüne aynı şekilde bir kart ekleriz.
+Kaydettikten sonra yukarıdaki `git push` adımıyla yayına alırız.
 
 ## Hatırlatmalar
 Günlük hatırlatmalar ve haftalık davetler `script.js` başındaki
